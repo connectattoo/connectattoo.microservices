@@ -10,12 +10,9 @@ services:
     ports:
       - '5433:5432'
 
-#  user-service:
-#    image: 'ubuntu:latest'
-#    build:
-#      context: .
-#    volumes:
-#      - ./C:\protoc:/workspace
-#    working_dir: /workspace
-#    command: [ "bash", "-c", "protoc --java_out=./generated --proto_path=./ your-proto-file.proto" ]
-
+  user-service:
+    build:
+      context: './template'
+    ports:
+      - '8080:8080'
+    tty: true
