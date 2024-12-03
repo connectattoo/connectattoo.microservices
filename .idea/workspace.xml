@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a1bf973-86c3-4af8-ad95-6c588b253b9b" name="Changes" comment="Alterando modulos.">
-      <change afterPath="$PROJECT_DIR$/template/src/main/proto/bank-service.proto" afterDir="false" />
+    <list default="true" id="8a1bf973-86c3-4af8-ad95-6c588b253b9b" name="Changes" comment="Alterando configuracoes do grpc.">
+      <change afterPath="$PROJECT_DIR$/client-grpc/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-grpc/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-grpc/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-grpc/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-grpc/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-grpc/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-grpc/src/main/java/com/grpc/client/client_grpc/ClientGrpcApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-grpc/src/main/proto/hello.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-grpc/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-grpc/src/test/java/com/grpc/client/client_grpc/ClientGrpcApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/src/main/java/com/connectattoo/template/GrpcService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/compose.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/template/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/template/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/src/main/java/com/connectattoo/template/TemplateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/template/src/main/java/com/connectattoo/template/TemplateApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/proto/bank-service.proto" beforeDir="false" afterPath="$PROJECT_DIR$/template/src/main/proto/hello.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +67,8 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.ClientGrpcApplication.executor&quot;: &quot;Debug&quot;,
     &quot;Application.TemplateApplication.executor&quot;: &quot;Run&quot;,
     &quot;Docker.docker-compose.yml.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;Docker.docker-compose.yml.user-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
@@ -63,14 +77,17 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/david/Desktop/connectattoo.microservices/template&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/david/Desktop/connectattoo.microservices/client-grpc/src/main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.1640625&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\david\Desktop\connectattoo.microservices\client-grpc\src\main" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\david\Desktop\connectattoo.microservices\template\src\main\proto" />
       <recent name="C:\Users\david\Desktop\connectattoo.microservices\template" />
@@ -79,6 +96,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.TemplateApplication">
+    <configuration name="ClientGrpcApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.grpc.client.client_grpc.ClientGrpcApplication" />
+      <module name="client-grpc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.grpc.client.client_grpc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TemplateApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.connectattoo.template.TemplateApplication" />
       <module name="template" />
@@ -127,6 +157,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.TemplateApplication" />
+        <item itemvalue="Application.ClientGrpcApplication" />
         <item itemvalue="Docker.docker-compose.yml.user-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
       </list>
@@ -157,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732836974983</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Alterando configuracoes do grpc.">
+      <option name="closed" value="true" />
+      <created>1733178531709</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733178531709</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,7 +211,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Alterando modulos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Alterando modulos." />
+    <MESSAGE value="Alterando configuracoes do grpc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Alterando configuracoes do grpc." />
   </component>
 </project>

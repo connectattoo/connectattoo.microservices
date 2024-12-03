@@ -1,13 +1,12 @@
-package com.connectattoo.template;
+package com.grpc.client.client_grpc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TemplateApplication {
+public class ClientGrpcApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TemplateApplication.class, args);
+		SpringApplication.run(ClientGrpcApplication.class, args);
 	}
 }
-
