@@ -1,27 +1,16 @@
-FROM amazoncorretto:23-alpine
+FROM alpine:latest
 
-RUN apk add --no-cache bash openssh-client
-
-LABEL org.opencontainers.image.title="Apache Maven"
-LABEL org.opencontainers.image.source=https://github.com/carlossg/docker-maven
-LABEL org.opencontainers.image.url=https://github.com/carlossg/docker-maven
-LABEL org.opencontainers.image.description="Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information."
-
-ENV MAVEN_HOME=/usr/share/maven
-
-COPY --from=maven:3.9.9-eclipse-temurin-17 ${MAVEN_HOME} ${MAVEN_HOME}
-COPY --from=maven:3.9.9-eclipse-temurin-17 /usr/local/bin/mvn-entrypoint.sh /usr/local/bin/mvn-entrypoint.sh
-COPY --from=maven:3.9.9-eclipse-temurin-17 /usr/share/maven/ref/settings-docker.xml /usr/share/maven/ref/settings-docker.xml
-
-RUN ln -s ${MAVEN_HOME}/bin/mvn /usr/bin/mvn
-
-ARG MAVEN_VERSION=3.9.9
 ARG USER_HOME_DIR="/root"
-ENV MAVEN_CONFIG="$USER_HOME_DIR/.m2"
+
+RUN wget -O /etc/apk/keys/amazoncorretto.rsa.pub  https://apk.corretto.aws/amazoncorretto.rsa.pub
+
+RUN echo "https://apk.corretto.aws/" >> /etc/apk/repositories
 
 RUN apk update
-RUN apk add curl
-RUN apk add unzip
+
+RUN apk add amazon-corretto-17
+
+RUN apk add curl unzip gcompat
 
 RUN curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v29.0/protoc-29.0-linux-x86_64.zip
 
@@ -29,6 +18,20 @@ RUN unzip protoc-29.0-linux-x86_64.zip -d "/usr/local"
 
 ENV PATH="$PATH:/usr/local/bin"
 
+RUN curl -LO https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.zip
+
+RUN unzip apache-maven-3.9.9-bin.zip -d "/usr/local"
+
+ENV PATH="$PATH:/usr/local/apache-maven-3.9.9/bin"
+
 COPY . ./api
+
+WORKDIR ./api
+
+RUN rm -rf ./target
+
+RUN mvn clean install
+
+# CMD [ "mvn spring-boot:run" ]
 
 CMD [ "/bin/sh" ]
