@@ -4,15 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a1bf973-86c3-4af8-ad95-6c588b253b9b" name="Changes" comment="alterando conexao com grcp.">
-      <change afterPath="$PROJECT_DIR$/template/src/main/java/com/connectattoo/template/model/UserModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/src/main/java/com/connectattoo/template/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/src/main/java/com/connectattoo/template/service/UserService.java" afterDir="false" />
+    <list default="true" id="8a1bf973-86c3-4af8-ad95-6c588b253b9b" name="Changes" comment="criando conexao com postgreSQL.">
+      <change afterPath="$PROJECT_DIR$/client-grpc/src/main/java/com/grpc/client/client_grpc/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-grpc/src/main/java/com/grpc/client/client_grpc/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-grpc/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proto-server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proto-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proto-server/src/main/java/com/microservice/UserModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proto-server/src/main/proto/schema.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proto-server/target/generated-sources/protobuf/grpc-java/com/connectattoo/PeopleServiceGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proto-server/target/generated-sources/protobuf/java/com/connectattoo/PeopleReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proto-server/target/generated-sources/protobuf/java/com/connectattoo/PeopleReqOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proto-server/target/generated-sources/protobuf/java/com/connectattoo/PeopleResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proto-server/target/generated-sources/protobuf/java/com/connectattoo/PeopleRespOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proto-server/target/generated-sources/protobuf/java/com/connectattoo/Schema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/src/main/java/grpc/GrpcModelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/connectattoo/template/controller/RotaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/template/src/main/java/com/connectattoo/template/controller/RotaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-grpc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client-grpc/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-grpc/src/main/java/com/grpc/client/client_grpc/ClientGrpcApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-grpc/src/main/java/com/grpc/client/client_grpc/ClientGrpcApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-grpc/src/main/proto/hello.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-grpc/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/template/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/connectattoo/template/GrpcService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/proto/bank-service.proto" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/template/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/template/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +84,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.ClientGrpcApplication.executor": "Debug",
+    "Application.ClientGrpcApplication.executor": "Run",
     "Application.TemplateApplication.executor": "Run",
     "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.user-service: Compose Deployment.executor": "Run",
@@ -75,8 +93,8 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/david/Desktop/connectattoo.microservices/client-grpc/src/main",
-    "project.structure.last.edited": "Project",
+    "last_opened_file_path": "C:/Users/david/Desktop/connectattoo.microservices/client-grpc",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.1640625",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -155,8 +173,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.TemplateApplication" />
-        <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
         <item itemvalue="Application.ClientGrpcApplication" />
+        <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.user-service: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -202,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733186450998</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="criando conexao com postgreSQL.">
+      <option name="closed" value="true" />
+      <created>1733354151365</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733354151365</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,6 +247,7 @@
     <MESSAGE value="Alterando modulos." />
     <MESSAGE value="Alterando configuracoes do grpc." />
     <MESSAGE value="alterando conexao com grcp." />
-    <option name="LAST_COMMIT_MESSAGE" value="alterando conexao com grcp." />
+    <MESSAGE value="criando conexao com postgreSQL." />
+    <option name="LAST_COMMIT_MESSAGE" value="criando conexao com postgreSQL." />
   </component>
 </project>

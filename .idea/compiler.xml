@@ -9,10 +9,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="template" />
         <module name="client-grpc" />
+        <module name="proto-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo" target="17" />
+      <module name="proto" target="1.8" />
       <module name="template (1)" target="17" />
     </bytecodeTargetLevel>
   </component>
