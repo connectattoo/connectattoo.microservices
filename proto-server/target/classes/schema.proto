@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package com.connectattoo;
+
+message PeopleReq {
+  int32 id = 1;
+  string name = 2;
+  string age = 3;
+}
+
+message PeopleResp {
+  string name = 1;
+  string age = 2;
+}
+
+service PeopleService {
+  rpc getPeople (PeopleReq) returns (PeopleResp);
+}
